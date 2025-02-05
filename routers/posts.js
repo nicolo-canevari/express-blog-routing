@@ -13,12 +13,21 @@ router.get('/', (req, res) => {
 
 });
 
-// show per visualizzare un elemento tramite id
+// show => per visualizzare un elemento tramite id
 router.get('/:id', function(req, res) {
 
   res.send('Dettagli dei post ' + reqparams.id);
 
 })
 
+// store => creare un elemento
+router.post('/', function(req, res) {
 
-// module.exports = posts;
+  res.send('Creazione nuovo post ');
+  console.log('Creazione nuovo post ');
+
+});
+
+
+// esportazione del router
+module.exports = router;
