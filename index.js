@@ -5,8 +5,10 @@ const app = express();
 // porta su cui il server ascolterà le richieste HTTP
 const port = 3000;
 
+// importo il router dei post
+const postRouter = require('./routers/posts');
 
-// gestine dei file statici della cartella 'public'
+// gestione dei file statici della cartella 'public'
 app.use(express.static('public'));
 
 
