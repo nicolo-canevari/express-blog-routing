@@ -9,14 +9,16 @@ const posts = require('../data/posts');
 // rotta per ottenere la lista dei post
 router.get('/', (req, res) => {
 
-  res.send('Lista dei post');
+  // restituzione dell'array di oggetti in formato json
+  res.json(posts);
 
 });
 
-// show => per visualizzare un elemento tramite id
+// show => visualizzare un elemento tramite id
 router.get('/:id', function (req, res) {
 
-  res.send('Dettagli dei post ' + reqparams.id);
+  // restituisce il singolo elemento in formato json
+  res.json(posts[req.params.id]);
 
 })
 

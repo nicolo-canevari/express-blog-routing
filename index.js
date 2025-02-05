@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 
 });
 
-// gestione della rotta di posts
+// tutte le richieste che iniziano con /posts verranno gestite dal ruter dei post
 app.use("/posts", postRouter);
 
 // funzione che "ascolta" la porta 3000
